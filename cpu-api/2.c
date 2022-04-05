@@ -25,5 +25,7 @@ int main() {
     char line4[] = "I am the parent process!\n";
     fputs(line4, file);
   }
+
+  fclose (file);
   return 0;
 }

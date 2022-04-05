@@ -7,3 +7,4 @@ set(src 1.c)
 
 add_executable(p1 1.c)
 add_executable(p2 2.c)
+add_executable(p3 3.c)
