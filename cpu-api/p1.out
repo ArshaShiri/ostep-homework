@@ -20,7 +20,9 @@ value of x in in the end of process with pid 32271 is: 105
 # value of x in parent process with pid 32652 is: 100
 # forking!
 
-# Why?
+# Why? The answer is given here: https://stackoverflow.com/questions/9364410/fork-and-output
+# Basically the output buffer is not flushed before fork and is shared. Therefore the child process 
+# also receives the same buffer as the parent in this case.
 
 value of x in parent process with pid 32652 is: 100
 forking!
