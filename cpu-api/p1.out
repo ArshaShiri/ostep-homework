@@ -1,0 +1,38 @@
+value of x in parent process with pid 32270 is: 100
+forking!
+Right after fork! 
+Inside parent process!
+value of x in parent process with pid 32270 before changing it is: 100
+value of x in parent process with pid 32270 after changing it is: 110
+value of x in in the end of process with pid 32270 is: 110
+Right after fork! 
+Inside child process!
+value of x in child process with pid 32271 before changing it is: 100
+value of x in child process with pid 32271 after changing it is: 105
+value of x in in the end of process with pid 32271 is: 105
+
+
+
+# The value was simply copy paster from program output. 
+# If however, ./p1 > ../p1.out is is called, the output is as below:
+# In this manner these lines are printed twice:
+
+# value of x in parent process with pid 32652 is: 100
+# forking!
+
+# Why?
+
+value of x in parent process with pid 32652 is: 100
+forking!
+Right after fork! 
+Inside parent process!
+value of x in parent process with pid 32652 before changing it is: 100
+value of x in parent process with pid 32652 after changing it is: 110
+value of x in in the end of process with pid 32652 is: 110
+value of x in parent process with pid 32652 is: 100
+forking!
+Right after fork! 
+Inside child process!
+value of x in child process with pid 32653 before changing it is: 100
+value of x in child process with pid 32653 after changing it is: 105
+value of x in in the end of process with pid 32653 is: 105
