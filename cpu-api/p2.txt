@@ -1,0 +1,5 @@
+Before forking
+After forking
+I am the parent process!
+After forking
+I am the child process!
