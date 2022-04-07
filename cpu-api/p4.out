@@ -1,0 +1,11 @@
+Inside child process!, going to execute ls!
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+compile_commands.json
+Makefile
+p1
+p2
+p3
+p4
+Inside parent process, going to wait!
