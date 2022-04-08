@@ -1,0 +1,6 @@
+I am the parent!
+Hello from the child!, my pid is 9399
+Inside the child process, going to wait!
+Value of wait in child is -1!
+Inside the parent process, going to wait!
+Value of wait in parent is 9399, which is the child process id!
