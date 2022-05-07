@@ -1,0 +1,152 @@
+ARG seed 0
+ARG job_num 3
+ARG max_run 100
+ARG max_wset 200
+ARG job_list a:100:100,b:100:50,c:100:50
+ARG affinity a:0,b:1,c:1
+ARG per_cpu_queues False
+ARG num_cpus 2
+ARG quantum 10
+ARG peek_interval 30
+ARG warmup_time 10
+ARG cache_size 100
+ARG random_order False
+ARG trace True
+ARG trace_time True
+ARG trace_cache True
+ARG trace_sched False
+ARG compute True
+
+Job name:a run_time:100 working_set_size:100
+Job name:b run_time:100 working_set_size:50
+Job name:c run_time:100 working_set_size:50
+
+Scheduler central queue: ['a', 'b', 'c']
+
+   0   a [ 99] cache[   ]     b [ 99] cache[   ]     
+   1   a [ 98] cache[   ]     b [ 98] cache[   ]     
+   2   a [ 97] cache[   ]     b [ 97] cache[   ]     
+   3   a [ 96] cache[   ]     b [ 96] cache[   ]     
+   4   a [ 95] cache[   ]     b [ 95] cache[   ]     
+   5   a [ 94] cache[   ]     b [ 94] cache[   ]     
+   6   a [ 93] cache[   ]     b [ 93] cache[   ]     
+   7   a [ 92] cache[   ]     b [ 92] cache[   ]     
+   8   a [ 91] cache[   ]     b [ 91] cache[   ]     
+   9   a [ 90] cache[w  ]     b [ 90] cache[ w ]     
+---------------------------------------------------
+  10   a [ 88] cache[w  ]     c [ 99] cache[ w ]     
+  11   a [ 86] cache[w  ]     c [ 98] cache[ w ]     
+  12   a [ 84] cache[w  ]     c [ 97] cache[ w ]     
+  13   a [ 82] cache[w  ]     c [ 96] cache[ w ]     
+  14   a [ 80] cache[w  ]     c [ 95] cache[ w ]     
+  15   a [ 78] cache[w  ]     c [ 94] cache[ w ]     
+  16   a [ 76] cache[w  ]     c [ 93] cache[ w ]     
+  17   a [ 74] cache[w  ]     c [ 92] cache[ w ]     
+  18   a [ 72] cache[w  ]     c [ 91] cache[ w ]     
+  19   a [ 70] cache[w  ]     c [ 90] cache[ ww]     
+---------------------------------------------------
+  20   a [ 68] cache[w  ]     b [ 88] cache[ ww]     
+  21   a [ 66] cache[w  ]     b [ 86] cache[ ww]     
+  22   a [ 64] cache[w  ]     b [ 84] cache[ ww]     
+  23   a [ 62] cache[w  ]     b [ 82] cache[ ww]     
+  24   a [ 60] cache[w  ]     b [ 80] cache[ ww]     
+  25   a [ 58] cache[w  ]     b [ 78] cache[ ww]     
+  26   a [ 56] cache[w  ]     b [ 76] cache[ ww]     
+  27   a [ 54] cache[w  ]     b [ 74] cache[ ww]     
+  28   a [ 52] cache[w  ]     b [ 72] cache[ ww]     
+  29   a [ 50] cache[w  ]     b [ 70] cache[ ww]     
+---------------------------------------------------
+  30   a [ 48] cache[w  ]     c [ 88] cache[ ww]     
+  31   a [ 46] cache[w  ]     c [ 86] cache[ ww]     
+  32   a [ 44] cache[w  ]     c [ 84] cache[ ww]     
+  33   a [ 42] cache[w  ]     c [ 82] cache[ ww]     
+  34   a [ 40] cache[w  ]     c [ 80] cache[ ww]     
+  35   a [ 38] cache[w  ]     c [ 78] cache[ ww]     
+  36   a [ 36] cache[w  ]     c [ 76] cache[ ww]     
+  37   a [ 34] cache[w  ]     c [ 74] cache[ ww]     
+  38   a [ 32] cache[w  ]     c [ 72] cache[ ww]     
+  39   a [ 30] cache[w  ]     c [ 70] cache[ ww]     
+---------------------------------------------------
+  40   a [ 28] cache[w  ]     b [ 68] cache[ ww]     
+  41   a [ 26] cache[w  ]     b [ 66] cache[ ww]     
+  42   a [ 24] cache[w  ]     b [ 64] cache[ ww]     
+  43   a [ 22] cache[w  ]     b [ 62] cache[ ww]     
+  44   a [ 20] cache[w  ]     b [ 60] cache[ ww]     
+  45   a [ 18] cache[w  ]     b [ 58] cache[ ww]     
+  46   a [ 16] cache[w  ]     b [ 56] cache[ ww]     
+  47   a [ 14] cache[w  ]     b [ 54] cache[ ww]     
+  48   a [ 12] cache[w  ]     b [ 52] cache[ ww]     
+  49   a [ 10] cache[w  ]     b [ 50] cache[ ww]     
+---------------------------------------------------
+  50   a [  8] cache[w  ]     c [ 68] cache[ ww]     
+  51   a [  6] cache[w  ]     c [ 66] cache[ ww]     
+  52   a [  4] cache[w  ]     c [ 64] cache[ ww]     
+  53   a [  2] cache[w  ]     c [ 62] cache[ ww]     
+  54   a [  0] cache[w  ]     c [ 60] cache[ ww]     
+  55   - [   ] cache[w  ]     c [ 58] cache[ ww]     
+  56   - [   ] cache[w  ]     c [ 56] cache[ ww]     
+  57   - [   ] cache[w  ]     c [ 54] cache[ ww]     
+  58   - [   ] cache[w  ]     c [ 52] cache[ ww]     
+  59   - [   ] cache[w  ]     c [ 50] cache[ ww]     
+---------------------------------------------------
+  60   - [   ] cache[w  ]     b [ 48] cache[ ww]     
+  61   - [   ] cache[w  ]     b [ 46] cache[ ww]     
+  62   - [   ] cache[w  ]     b [ 44] cache[ ww]     
+  63   - [   ] cache[w  ]     b [ 42] cache[ ww]     
+  64   - [   ] cache[w  ]     b [ 40] cache[ ww]     
+  65   - [   ] cache[w  ]     b [ 38] cache[ ww]     
+  66   - [   ] cache[w  ]     b [ 36] cache[ ww]     
+  67   - [   ] cache[w  ]     b [ 34] cache[ ww]     
+  68   - [   ] cache[w  ]     b [ 32] cache[ ww]     
+  69   - [   ] cache[w  ]     b [ 30] cache[ ww]     
+---------------------------------------------------
+  70   - [   ] cache[w  ]     c [ 48] cache[ ww]     
+  71   - [   ] cache[w  ]     c [ 46] cache[ ww]     
+  72   - [   ] cache[w  ]     c [ 44] cache[ ww]     
+  73   - [   ] cache[w  ]     c [ 42] cache[ ww]     
+  74   - [   ] cache[w  ]     c [ 40] cache[ ww]     
+  75   - [   ] cache[w  ]     c [ 38] cache[ ww]     
+  76   - [   ] cache[w  ]     c [ 36] cache[ ww]     
+  77   - [   ] cache[w  ]     c [ 34] cache[ ww]     
+  78   - [   ] cache[w  ]     c [ 32] cache[ ww]     
+  79   - [   ] cache[w  ]     c [ 30] cache[ ww]     
+---------------------------------------------------
+  80   - [   ] cache[w  ]     b [ 28] cache[ ww]     
+  81   - [   ] cache[w  ]     b [ 26] cache[ ww]     
+  82   - [   ] cache[w  ]     b [ 24] cache[ ww]     
+  83   - [   ] cache[w  ]     b [ 22] cache[ ww]     
+  84   - [   ] cache[w  ]     b [ 20] cache[ ww]     
+  85   - [   ] cache[w  ]     b [ 18] cache[ ww]     
+  86   - [   ] cache[w  ]     b [ 16] cache[ ww]     
+  87   - [   ] cache[w  ]     b [ 14] cache[ ww]     
+  88   - [   ] cache[w  ]     b [ 12] cache[ ww]     
+  89   - [   ] cache[w  ]     b [ 10] cache[ ww]     
+---------------------------------------------------
+  90   - [   ] cache[w  ]     c [ 28] cache[ ww]     
+  91   - [   ] cache[w  ]     c [ 26] cache[ ww]     
+  92   - [   ] cache[w  ]     c [ 24] cache[ ww]     
+  93   - [   ] cache[w  ]     c [ 22] cache[ ww]     
+  94   - [   ] cache[w  ]     c [ 20] cache[ ww]     
+  95   - [   ] cache[w  ]     c [ 18] cache[ ww]     
+  96   - [   ] cache[w  ]     c [ 16] cache[ ww]     
+  97   - [   ] cache[w  ]     c [ 14] cache[ ww]     
+  98   - [   ] cache[w  ]     c [ 12] cache[ ww]     
+  99   - [   ] cache[w  ]     c [ 10] cache[ ww]     
+---------------------------------------------------
+ 100   - [   ] cache[w  ]     b [  8] cache[ ww]     
+ 101   - [   ] cache[w  ]     b [  6] cache[ ww]     
+ 102   - [   ] cache[w  ]     b [  4] cache[ ww]     
+ 103   - [   ] cache[w  ]     b [  2] cache[ ww]     
+ 104   - [   ] cache[w  ]     b [  0] cache[ ww]     
+ 105   - [   ] cache[w  ]     c [  8] cache[ ww]     
+ 106   - [   ] cache[w  ]     c [  6] cache[ ww]     
+ 107   - [   ] cache[w  ]     c [  4] cache[ ww]     
+ 108   - [   ] cache[w  ]     c [  2] cache[ ww]     
+ 109   - [   ] cache[w  ]     c [  0] cache[ ww]     
+
+Finished time 110
+
+Per-CPU stats
+  CPU 0  utilization 50.00 [ warm 40.91 ]
+  CPU 1  utilization 100.00 [ warm 81.82 ]
+
